@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoEditDe - Simple Code Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #007acc;
+            text-align: center;
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: #007acc;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin: 20px 0;
+            transition: background-color 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #005999;
+        }
+        .features {
+            margin: 20px 0;
+        }
+        .features ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .requirements {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CoEditDe</h1>
+        <p>A simple code editor application built with C# WPF and Monaco Editor, similar to Visual Studio Code but focused only on editing code files.</p>
+
+        <div class="features">
+            <h2>Features</h2>
+            <ul>
+                <li>✓ Monaco Editor integration for rich code editing</li>
+                <li>✓ Support for multiple programming languages (C#, Python, JavaScript, TypeScript, HTML, CSS, C++, C, Java, etc.)</li>
+                <li>✓ File opening via menu</li>
+                <li>✓ Syntax highlighting and IntelliSense-like features</li>
+                <li>✓ Customizable theme and font size</li>
+                <li>✓ Built-in developer console</li>
+                <li>✓ First-run setup wizard</li>
+                <li>✓ Lightweight and fast</li>
+            </ul>
+        </div>
+
+        <div class="requirements">
+            <h2>System Requirements</h2>
+            <p>Windows 10 or later with WebView2 runtime (automatically included in the download)</p>
+        </div>
+
+        <a href="CoEditDe_Installer.zip" class="download-btn" download>Download CoEditDe Installer (Windows)</a>
+
+        <h2>Installation</h2>
+        <ol>
+            <li>Download the installer zip file above</li>
+            <li>Extract the contents to a temporary folder</li>
+            <li>Run CoEditDeInstaller.exe - it will automatically install CoEditDe and launch it</li>
+            <li>The installer will install CoEditDe to Program Files and create settings</li>
+        </ol>
+
+        <h2>Usage</h2>
+        <p>Use File > Open to load a code file. The editor will automatically detect the language based on file extension.</p>
+
+        <p><em>Note: Requires internet connection for initial Monaco Editor load. For offline use, keep the application open. There are bugs and we are working on them, and more versions soon.</em></p>
+    </div>
+</body>
+</html>
