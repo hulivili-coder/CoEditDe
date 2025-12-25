@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoEditDe - Code Editor</title>
+    <script src="https://unpkg.com/monaco-editor@0.44.0/min/vs/loader.min.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        #container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@0.44.0/min/vs' } });
+        require(['vs/editor/editor.main'], function() {
+            window.editor = monaco.editor.create(document.getElementById('container'), {
+                value: '// Welcome to CoEditDe\n// Start editing your C# code here\n\nusing System;\n\nclass Program {\n    static void Main() {\n        Console.WriteLine("Hello, World!");\n    }\n}',
+                language: 'csharp',
+                theme: 'vs-dark',
+                fontSize: 14,
+                automaticLayout: true
+            });
+        });
+
+        window.setEditorContent = function(content, language) {
+            if (window.editor) {
+                window.editor.setValue(content);
+                window.editor.updateOptions({language: language});
+            } else {
+                console.log('Editor not ready');
+            }
+        };
+    </script>
+</body>
+</html>

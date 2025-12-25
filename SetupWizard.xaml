@@ -1,0 +1,24 @@
+<Window x:Class="CoEditDe.SetupWizard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoEditDe"
+        mc:Ignorable="d"
+        Title="CoEditDe Setup Wizard" Height="400" Width="500" 
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ContentControl x:Name="PageContent" Margin="20" />
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="20">
+            <Button x:Name="BackButton" Content="Back" Width="80" Margin="0,0,10,0" Click="BackButton_Click" Visibility="Collapsed" />
+            <Button x:Name="NextButton" Content="Next" Width="80" Click="NextButton_Click" />
+            <Button x:Name="FinishButton" Content="Finish" Width="80" Margin="10,0,0,0" Click="FinishButton_Click" Visibility="Collapsed" />
+        </StackPanel>
+    </Grid>
+</Window>
