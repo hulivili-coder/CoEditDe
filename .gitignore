@@ -32,3 +32,6 @@ packages/
 # Publish outputs (except installer)
 **/publish/
 !**/publish/CoEditDeInstaller.exe
+
+# Zip files (large installer archives)
+*.zip
